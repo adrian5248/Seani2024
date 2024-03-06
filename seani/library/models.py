@@ -12,7 +12,7 @@ class Module(models.Model):
     
     
     def num_questions(self):
-        return self.questions_set.count()
+        return self.question_set.count()
     num_questions.short_description = "Numero de preguntas"
 
     def __str__(self):
