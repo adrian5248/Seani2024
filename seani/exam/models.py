@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from career.models import career
+from career.models import Career
 from library.models import Module, Question
 
 
@@ -43,7 +43,7 @@ class Exam(models.Model):
             verbose_name = 'Etapa'
         )
     career = models.ForeignKey(
-            career,
+            Career,
             on_delete = models.CASCADE,
             verbose_name = 'Carrera'
             )
@@ -124,6 +124,6 @@ class Breakdown(models.Model):
     )
     correct = models.CharField(
         verbose_name = "Respuesta correcta",
-        max_lenth = 5,
+        max_length = 5,
         default = '-'
     )

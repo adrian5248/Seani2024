@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class career(models.Model):
+class Career(models.Model):
 
     LEVELS = [
         ('Ing', 'Ingenieria'),
