@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.http import HttpResponse
+
 from .models import Exam
 from .forms import CandidateForm
+
+def home(request):
+    user = request.user
+    return render(request, 'exam/home.html', {'user': user})
+
 
 # Create your views here.
 def add_candidate(request):
